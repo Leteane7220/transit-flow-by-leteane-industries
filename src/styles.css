@@ -16,7 +16,7 @@
  --color-destructive: var(--destructive); --color-destructive-foreground: var(--foreground);
  --radius-sm: 4px; --radius-md: 6px; --radius-lg: 8px;
 }
-:root { --background: oklch(0 0 0); --foreground: oklch(1 0 0); --card: oklch(.07 0 0); --secondary: oklch(.13 0 0); --accent: oklch(.19 0 0); --muted-foreground: oklch(.58 0 0); --primary: oklch(1 0 0); --primary-foreground: oklch(0 0 0); --border: oklch(.25 0 0); --success: oklch(1 0 0); --warning: oklch(.78 0 0); --info: oklch(.78 0 0); --destructive: oklch(.85 0 0); --radius: 8px; }
+:root { --background: oklch(0 0 0); --foreground: oklch(1 0 0); --card: oklch(.07 0 0); --secondary: oklch(.18 0 0); --accent: oklch(.24 0 0); --muted-foreground: oklch(.68 0 0); --primary: oklch(1 0 0); --primary-foreground: oklch(0 0 0); --border: oklch(.3 0 0); --success: oklch(1 0 0); --warning: oklch(.8 0 0); --info: oklch(.8 0 0); --destructive: oklch(.85 0 0); --radius: 8px; }
 @layer base { * { border-color: var(--border); } body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-sans); font-size:14px; } button,a,input,select { -webkit-tap-highlight-color:transparent; } button { cursor:pointer; } ::selection { background:var(--primary); color:var(--primary-foreground); } }
 .app-shell { display:grid; grid-template-columns:228px minmax(0,1fr); min-height:100vh; }
 .app-shell.collapsed { grid-template-columns:76px minmax(0,1fr); }
@@ -76,6 +76,8 @@ select option { background:var(--card); }
 .status.on-route { color:var(--info); background:color-mix(in oklch,var(--info) 9%,transparent); }
 .status.fully-booked { color:var(--muted-foreground); background:var(--secondary); }
 .status-dot { width:5px; height:5px; border-radius:50%; background:currentColor; }
+.status.on-route .status-dot { background:transparent; box-shadow:inset 0 0 0 1.5px currentColor; }
+.status.fully-booked .status-dot { background:transparent; width:4px; height:4px; box-shadow:inset 0 0 0 1.5px currentColor; opacity:.65; }
 .route-line { display:flex; align-items:center; justify-content:space-between; gap:7px; margin:22px 0; font-size:11px; font-weight:600; }
 .route-line svg { flex-shrink:0; color:var(--muted-foreground); }
 .capacity-track { height:5px; background:var(--secondary); border-radius:3px; overflow:hidden; margin:9px 0 15px; }

@@ -11,5 +11,5 @@
 
 ## Transit Flow architecture
 - Keep fleet sample data and filtering in a browser safe module so dashboard interactions work without a connected service.
-- Define dashboard styling through semantic tokens in the global stylesheet so the dark palette remains consistent.
+- Define dashboard styling through semantic tokens in the global stylesheet so the palette remains consistent.
 - Keep this initial dashboard at the index route with in session interactions; connecting persistent fleet records requires Lovable Cloud.
